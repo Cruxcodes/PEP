@@ -31,7 +31,6 @@ main {
   background-size: cover;
   background-position: right bottom;
   background-attachment: fixed;
-  padding: 30px;
   background-repeat: no-repeat;
   color: white;
   height: 100vh;
@@ -42,14 +41,35 @@ main {
     background-position: 90%;
   }
 }
+@media screen and (max-width: 768px) {
+  main {
+    background-size: cover;
+    background-position: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  main {
+    text-align: center;
+  }
+}
 main .profile {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 main .profile div {
   width: 60%;
+}
+@media screen and (max-width: 768px) {
+  main .profile div {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .profile div {
+    width: 100%;
+  }
 }
 main .profile div h5 {
   font-family: "Inter", sans-serif;
@@ -64,9 +84,10 @@ main .profile div h3 {
   line-height: 69px;
   margin: 20px 0px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main .profile div h3 {
-    font-size: 10px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 main .profile div p {
@@ -76,6 +97,11 @@ main .profile div p {
   line-height: 150%;
   width: 85%;
 }
+@media screen and (max-width: 500px) {
+  main .profile div p {
+    width: 100%;
+  }
+}
 
 .testimonial {
   background: url(https://github.com/Cruxcodes/images-repository/blob/main/Group%2020.png?raw=true);
@@ -83,6 +109,11 @@ main .profile div p {
   background-position: right top;
   background-size: cover;
   padding: 250px 0px;
+}
+@media screen and (max-width: 768px) {
+  .testimonial {
+    padding: 100px 0px;
+  }
 }
 .testimonial .comment {
   position: relative;
@@ -94,6 +125,16 @@ main .profile div p {
   font-size: 32px;
   color: #18181b;
 }
+@media screen and (max-width: 768px) {
+  .testimonial .comment {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .testimonial .comment {
+    font-size: 20px;
+  }
+}
 .testimonial .comment::before {
   position: absolute;
   content: url(https://github.com/Cruxcodes/images-repository/blob/main/tick.png?raw=true);
@@ -103,7 +144,7 @@ main .profile div p {
 .testimonial .comment::after {
   position: absolute;
   content: url(https://github.com/Cruxcodes/images-repository/blob/main/backtick.png?raw=true);
-  bottom: -25%;
+  bottom: -15%;
   right: 2%;
 }
 .testimonial .person .infoBody {
@@ -136,6 +177,21 @@ main .profile div p {
   gap: 30px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .videoSection .videoContainer {
+    grid-template-columns: 500px 500px 500px 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .videoSection .videoContainer {
+    grid-template-columns: 400px 400px 400px 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .videoSection .videoContainer {
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+}
 .videoSection .videoContainer .swiper-button-next:after {
   color: white;
 }
@@ -153,6 +209,13 @@ main .profile div p {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   right: 0px;
+}
+@media screen and (max-width: 500px) {
+  .videoSection .videoContainer .blur {
+    width: 50px;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
 }
 .videoSection .videoContainer .video .img {
   position: relative;
@@ -191,6 +254,14 @@ main .profile div p {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
+}
+@media screen and (max-width: 500px) {
+  .videoSection .videoContainer .video .info h3 {
+    font-size: 20px;
+  }
+  .videoSection .videoContainer .video .info p {
+    font-size: 16px;
+  }
 }
 
 .sec_twitter .section {
