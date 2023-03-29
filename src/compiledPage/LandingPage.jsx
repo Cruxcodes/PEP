@@ -1,27 +1,23 @@
 import React from "react";
-import Navbar from "../components/LandingPage/Navbar";
 import Header from "../components/LandingPage/Header";
 import * as landing from "../components/LandingPage";
+import Sidebar from "../components/Sidebar/Sidebar";
+import Layout from "../components/Layout/Layout";
 import { useEffect } from "react";
+import Footer from "../components/Footer/Footer";
 
 function LandingPage() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "../js/script.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+
   return (
     <div>
-      <Navbar />
-      <Header />
-      <landing.Testimonial />
-      <landing.Videos />
-      <landing.Section/>
-      {/* <landing.TwitterConversations /> */}
+      <Layout>
+        <Header />
+        <landing.Testimonial />
+        <landing.Videos />
+        <landing.Section />
+      </Layout>
+
+      {/* <Footer /> */}
     </div>
   );
 }

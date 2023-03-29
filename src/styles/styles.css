@@ -266,17 +266,42 @@ main .profile div p {
 
 .sec_twitter .section {
   background-image: url(https://github.com/Cruxcodes/images-repository/blob/main/secondBg.png?raw=true);
-  background-size: cover, cover;
+  background-size: cover;
   padding: 260px 0px;
   background-position: top left;
   background-repeat: no-repeat;
   color: white;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 768px) {
+  .sec_twitter .section {
+    background-position: 10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec_twitter .section {
+    background-position: 20%;
+  }
+}
 .sec_twitter .section .info {
   font-family: "Plus Jakarta Sans", sans-serif;
-  width: 70%;
+  width: 65%;
   margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .sec_twitter .section .info {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sec_twitter .section .info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec_twitter .section .info {
+    text-align: center;
+  }
 }
 .sec_twitter .section .info h3 {
   font-style: normal;
@@ -284,12 +309,27 @@ main .profile div p {
   font-size: 42px;
   line-height: 150%;
 }
+@media screen and (max-width: 500px) {
+  .sec_twitter .section .info h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .sec_twitter .section .info h3 {
+    font-size: 25px;
+  }
+}
 .sec_twitter .section .info p {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   margin: 40px 0px;
   line-height: 150%;
+}
+@media screen and (max-width: 500px) {
+  .sec_twitter .section .info p {
+    font-size: 20px;
+  }
 }
 .sec_twitter .twitter {
   position: relative;
@@ -307,18 +347,35 @@ main .profile div p {
   background: #000;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 568px) {
+  .sec_twitter .twitter .top {
+    flex-direction: column;
+  }
+}
 .sec_twitter .twitter .top div {
   display: flex;
-  width: 40%;
+  width: 90%;
   align-items: center;
   gap: 10px;
   color: white;
 }
 .sec_twitter .twitter .top a {
   color: white;
-  background: #44b0ff;
+  background-image: linear-gradient(45deg, #44b0ff, #44b0ff, white, white);
+  transition: 0.5s;
+  background-size: 250%;
   padding: 5px 30px;
   border-radius: 30px;
+}
+.sec_twitter .twitter .top a:hover {
+  background-position: 100%;
+  color: #44b0ff;
+  box-shadow: 2px 2px 20px #bdbbbb;
+}
+@media screen and (max-width: 400px) {
+  .sec_twitter .twitter .top a {
+    text-align: center;
+  }
 }
 .sec_twitter .twitter .bottom {
   padding: 50px 60px 90px;
@@ -329,6 +386,19 @@ main .profile div p {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 760px) {
+  .sec_twitter .twitter .bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
 .sec_twitter .twitter .bottom img {
   width: 30%;
+}
+@media screen and (max-width: 760px) {
+  .sec_twitter .twitter .bottom img {
+    width: 100%;
+    margin: 20px 0px;
+  }
 }/*# sourceMappingURL=styles.css.map */

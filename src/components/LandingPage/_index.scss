@@ -167,7 +167,7 @@ main {
     @media screen and (max-width: 500px) {
       grid-template-columns: 400px 400px 400px 400px;
     }
-        @media screen and (max-width: 400px) {
+    @media screen and (max-width: 400px) {
       grid-template-columns: 300px 300px 300px 300px;
     }
     grid-template-rows: 1fr;
@@ -248,26 +248,49 @@ main {
     }
   }
 }
+
 .sec_twitter {
   .section {
     background-image: url(https://github.com/Cruxcodes/images-repository/blob/main/secondBg.png?raw=true);
-    background-size: cover, cover;
+    background-size: cover;
     padding: 260px 0px;
+    // background-attachment: fixed;
     background-position: top left;
-    //   background-attachment: fixed;
     background-repeat: no-repeat;
     color: white;
     margin-bottom: 40px;
+    @media screen and (max-width: 768px) {
+      background-position: 10%;
+    }
+    @media screen and (max-width: 500px) {
+      background-position: 20%;
+    }
     .info {
       font-family: $jakarta;
-      width: 70%;
+      width: 65%;
       margin-left: auto;
+
+      @media screen and (max-width: 768px) {
+        margin: auto;
+      }
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 500px) {
+        text-align: center;
+      }
 
       h3 {
         font-style: normal;
         font-weight: 700;
         font-size: 42px;
         line-height: 150%;
+        @media screen and (max-width: 500px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 350px) {
+          font-size: 25px;
+        }
       }
       p {
         font-style: normal;
@@ -275,6 +298,9 @@ main {
         font-size: 24px;
         margin: 40px 0px;
         line-height: 150%;
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -284,7 +310,6 @@ main {
     top: -120px;
     border-radius: 20px;
     overflow: hidden;
-    // z-index: 10000;
     background: white;
     box-shadow: 0px 2px 20px gray;
     padding: 0px;
@@ -294,18 +319,38 @@ main {
       padding: 20px 40px;
       background: #000;
       background-repeat: no-repeat;
+      @media screen and (max-width: 568px) {
+        flex-direction: column;
+      }
+
       div {
         display: flex;
-        width: 40%;
+        width: 90%;
         align-items: center;
         gap: 10px;
         color: white;
       }
       a {
         color: white;
-        background: #44b0ff;
+        background-image: linear-gradient(
+          45deg,
+          #44b0ff,
+          #44b0ff,
+          white,
+          white
+        );
+        transition: 0.5s;
+        background-size: 250%;
         padding: 5px 30px;
         border-radius: 30px;
+        &:hover {
+          background-position: 100%;
+          color: #44b0ff;
+          box-shadow: 2px 2px 20px #bdbbbb;
+        }
+        @media screen and (max-width: 400px) {
+          text-align: center;
+        }
       }
     }
     .bottom {
@@ -316,8 +361,18 @@ main {
       background-position: top left;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 760px) {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
       img {
         width: 30%;
+
+        @media screen and (max-width: 760px) {
+          width: 100%;
+          margin: 20px 0px;
+        }
       }
     }
   }
