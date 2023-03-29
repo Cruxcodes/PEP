@@ -78,8 +78,10 @@ main .profile div p {
 }
 
 .testimonial {
+  background: url(https://github.com/Cruxcodes/images-repository/blob/main/Group%2020.png?raw=true);
   background-repeat: no-repeat;
   background-position: right top;
+  background-size: cover;
   padding: 250px 0px;
 }
 .testimonial .comment {
@@ -160,7 +162,16 @@ main .profile div p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  transition: 0.5s;
+}
+.videoSection .videoContainer .video .img .playButton:hover {
+  box-shadow: 0px 24px 50px rgba(90, 90, 90, 0.849), 0px -24px 50px rgba(182, 182, 182, 0.938);
+  transform-origin: center;
+  width: 80px;
+  height: 80px;
 }
 .videoSection .videoContainer .video .img img {
   width: 100%;
@@ -182,52 +193,64 @@ main .profile div p {
   line-height: 25px;
 }
 
-.section .info {
+.sec_twitter .section {
+  background-image: url(https://github.com/Cruxcodes/images-repository/blob/main/secondBg.png?raw=true);
+  background-size: cover, cover;
+  padding: 260px 0px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  color: white;
+  margin-bottom: 40px;
+}
+.sec_twitter .section .info {
   font-family: "Plus Jakarta Sans", sans-serif;
   width: 70%;
   margin-left: auto;
 }
-.section .info h3 {
+.sec_twitter .section .info h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
   line-height: 150%;
 }
-.section .info p {
+.sec_twitter .section .info p {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   margin: 40px 0px;
   line-height: 150%;
 }
-
-.twitter {
+.sec_twitter .twitter {
+  position: relative;
+  top: -120px;
   border-radius: 20px;
+  overflow: hidden;
+  background: white;
   box-shadow: 0px 2px 20px gray;
   padding: 0px;
 }
-.twitter .top {
+.sec_twitter .twitter .top {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
   background: #000;
   background-repeat: no-repeat;
 }
-.twitter .top div {
+.sec_twitter .twitter .top div {
   display: flex;
   width: 40%;
   align-items: center;
   gap: 10px;
   color: white;
 }
-.twitter .top a {
+.sec_twitter .twitter .top a {
   color: white;
-  background: #44B0FF;
+  background: #44b0ff;
   padding: 5px 30px;
   border-radius: 30px;
 }
-.twitter .bottom {
-  padding: 50px 60px;
+.sec_twitter .twitter .bottom {
+  padding: 50px 60px 90px;
   background: url("https://github.com/Cruxcodes/images-repository/blob/main/Mask%20group%20(1).png?raw=true");
   background-size: contain;
   background-repeat: no-repeat;
@@ -235,6 +258,6 @@ main .profile div p {
   display: flex;
   justify-content: space-between;
 }
-.twitter .bottom img {
+.sec_twitter .twitter .bottom img {
   width: 30%;
 }/*# sourceMappingURL=styles.css.map */
